@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Routes, Route, Link } from 'react-router-dom';
 import UserPage from "../pages/UserPage";
 import Blog from "../pages/Blog";
+import classes from './UI/button/MyButton.module.css';
 
 const Header = function () {
 
@@ -15,7 +16,7 @@ const Header = function () {
             <Link to="/" >ДАМОЙ</Link>
             <Link to="/blog">БЛОГ</Link>
             <Link to="/users">Пользователи</Link>
-
+        <button onClick={()=>{}} className={classes.userBtn}>Button</button>
             <Routes>
                 <Route path="/" />
                 <Route path="/blog" element={<Blog/>}/>

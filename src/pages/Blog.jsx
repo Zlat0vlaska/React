@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import Header from '../Components/Header';
+
 import PostList from '../Components/PostList';
 import '../styles/App.css';
 import PostForm from '../Components/PostForm';
@@ -51,9 +51,7 @@ function Blog() {
 
   return (
     <div className="App">
-      <div className='.Header'>
-        <Header />
-      </div>
+      
       <Button style={{ marginTop: 30 }} onClick={() => { setModal(true) }} variant='contained'>
         Создать пост
       </Button>

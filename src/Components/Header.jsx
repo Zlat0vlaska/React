@@ -12,7 +12,7 @@ const Header = function () {
         <header>
             {/* <h3>SITE</h3> */}
 
-            <Link to="/">ДАМОЙ</Link>
+            <Link to="/" >ДАМОЙ</Link>
             <Link to="/blog">БЛОГ</Link>
             <Link to="/users">Пользователи</Link>
 

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 const Likes = function () {
   const [likes, setLikes] = useState(0);
 

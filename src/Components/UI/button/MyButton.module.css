@@ -7,6 +7,10 @@
     cursor: pointer;
 }
 
+button:hover {
+    color: #115cbf; /* Цвет рамки при наведении */
+   }
+
 .userBtn {
     padding: 5px 15px;
     color:  #313236;;

@@ -1,8 +1,5 @@
 import UserService from '../API/UserService';
 import React, { useState, useEffect } from 'react';
-import Header from '../Components/Header';
-import PostList from '../Components/PostList';
-import { Button } from '@mui/material';
 import { TypeUser } from '../types/types';
 
 

@@ -5,9 +5,6 @@ import PostList from '../Components/PostList';
 import { Button } from '@mui/material';
 import { TypeUser } from '../types/types';
 
-type UserList = {
-    users: TypeUser[];
-};
 
 const UserPage:React.FC<TypeUser> = () => {
     const [users, setUusers] = useState<TypeUser[]>([]);
@@ -16,7 +13,6 @@ const UserPage:React.FC<TypeUser> = () => {
         const response = await UserService.getAll();
         setUusers(response.data);
     }
-
 
     useEffect(() => {
         fetchPosts();

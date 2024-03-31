@@ -1,6 +1,8 @@
 import UserService from '../API/UserService';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../Components/Header';
+import PostList from '../Components/PostList';
+import { Button } from '@mui/material';
 
 export default function UserPage() {
     const [users, setUusers] = useState([]);
@@ -10,14 +12,17 @@ export default function UserPage() {
         setUusers(response.data);
     }
 
+
+    useEffect(() => {
+        fetchPosts();
+      }, []);
+
     return (
         <>
-            <div className='.Header'>
-                <Header />
-            </div>
-            <button onClick={fetchPosts}>GET Users</button>
-
-
+            {/* <button onClick={fetchPosts}>GET Users</button> */}
+            {users.map(user =>
+                <div>{user.id}. {user.name}</div>
+            )}
         </>
     )
 }

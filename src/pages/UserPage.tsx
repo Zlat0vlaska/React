@@ -3,9 +3,14 @@ import React, { useState, useEffect } from 'react';
 import Header from '../Components/Header';
 import PostList from '../Components/PostList';
 import { Button } from '@mui/material';
+import { TypeUser } from '../types/types';
 
-export default function UserPage() {
-    const [users, setUusers] = useState([]);
+type UserList = {
+    users: TypeUser[];
+};
+
+const UserPage:React.FC<TypeUser> = () => {
+    const [users, setUusers] = useState<TypeUser[]>([]);
 
     async function fetchPosts() {
         const response = await UserService.getAll();
@@ -20,8 +25,9 @@ export default function UserPage() {
     return (
         <>
             {users.map(user =>
-                <div>{user.id}. {user.name}</div>
+                <div key={user.id}>{user.id}. {user.name}</div>
             )}
         </>
     )
 }
+export default UserPage;

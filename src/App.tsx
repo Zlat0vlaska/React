@@ -1,3 +1,4 @@
+import React from 'react';
 import './styles/App.css';
 import Home from './pages/Home';
 import Blog from "./pages/Blog";
@@ -16,7 +17,7 @@ function App() {
           <Route path="/" element={<Layout />} >
             <Route index element={<Home/>} />
             <Route path="/blog" element={<Blog />} />
-            <Route path="/users" element={<UserPage />} />
+            <Route path="/users" element={<UserPage id={0} name={''} />} />
           </Route>
         </Routes>
 
